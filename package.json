@@ -1,7 +1,7 @@
 {
   "name": "stonegate",
   "version": "1.0.0",
-  "description": "new frontend for the Stonegate Country Club",
+  "description": "New frontend for the Stonegate Country Club. Goals include increasing the readability, responsiveness, and accessability of the site.",
   "main": "index.js",
   "scripts": {
     "test": "test"
@@ -15,5 +15,8 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/pafrias/stonegate.git"
+  },
+  "dependencies": {
+    "nodemon": "^2.0.21"
   }
 }
