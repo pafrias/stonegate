@@ -1,0 +1,19 @@
+{
+  "name": "stonegate",
+  "version": "1.0.0",
+  "description": "new frontend for the Stonegate Country Club",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "keywords": [
+    "frontend",
+    "html"
+  ],
+  "author": "Pablo A Frias",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/npm/cli.git"
+  }
+}
