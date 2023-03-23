@@ -1,0 +1,6 @@
+@import "./reset.css";
+@import "./theme.css";
+
+header {
+  margin: auto;
+}
