@@ -2,5 +2,10 @@
 @import "./theme.css";
 
 header {
-  margin: auto;
+  background-image: url("https://stonegatecc.com/wp-content/uploads/sites/409/2022/08/banner.jpeg");
+  background-size: cover;
+  background-position: center;
+  padding: 10vw 0;
 }
+
+
