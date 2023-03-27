@@ -2,10 +2,14 @@
 @import "./theme.css";
 
 header {
-  background-image: url("https://stonegatecc.com/wp-content/uploads/sites/409/2022/08/banner.jpeg");
+  height: 100vh;
+  background: linear-gradient(45deg, black, transparent), var(--banner-image);
   background-size: cover;
   background-position: center;
   padding: 10vw 0;
 }
 
+/* Handle mobile version FIRST */
+/* THEN style desktop version */
 
+/* @media only screen and (min-aspect-ratio: 5 / 8) and (min-width: 768px) { */
