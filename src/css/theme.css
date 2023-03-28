@@ -1,9 +1,14 @@
 :root {
   --header-color-main: white;
   --body-color: black;
+  --body-header-color: slategray;
   --bg-color: white;
   --sgcc-banner-image: url("https://stonegatecc.com/wp-content/uploads/sites/409/2022/08/banner.jpeg");
   --banner-image: url("https://www.boston.com/wp-content/uploads/2020/07/Shane-Serewicz_1of2.jpeg");
+}
+
+section {
+  padding: 1rem;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -11,19 +16,16 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Montserrat";
   text-transform: uppercase;
   line-height: 2;
+  color: rgba(255, 255, 255, 0);
 }
 
-h1 {
-  font-size: 6.5vw;
-  /* font-weight: 800; */
-  color: var(--header-color-main);
-}
 
 h2 {
   font-size: 4vw;
   font-weight: 400;
-  color: var(--header-color-main);
 }
 
-
+p {
+  font-family: Lato;
+}
 

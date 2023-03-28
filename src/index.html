@@ -10,15 +10,21 @@
   <link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
 </head>
-<body>
-  <header>
-    <div>
+<body onload="loadAnimation()">
+ 
+  <header class="parallax-bg">
+    <!-- <div id="logo">
+      <img src="media/sgcc_logo.jpeg" alt="" width="80vw">
+    </div> -->
+    <div id="transition_header">
       <h1>Stonegate Country Club</h1>
+      <hr width="90%">
       <h2>Proudly Serving the Stonegate HOA</h2>
+      <h2>Est. 1968</h2>
     </div>
   </header>
   <main>
-    <section>
+    <section id="about_us">
       <h2>About Us</h2>
       <p>Stonegate is a unique residential community of homes, condominiums, and apartments. The focal point of the neighborhood is a 2.3-acre private country club maintained by the Stonegate Master Association. Founded in 1969, the club sits next to the 17-acre Stonegate Lake. Our amenities include six tennis courts, three swimming pools, a fitness center, a recreation field, picnic areas, and a basketball court. The 4,000 square foot clubhouse is frequently used for weddings, parties, and other special events. We are closed on Thanksgiving, Christmas and New Year’s Day.</p>
 
@@ -29,12 +35,64 @@
       <p>The club employs many talented and collegial staff members that take pride in making sure members enjoy their experience on-site. Susan Towne is the club manager. The Association is professionally managed by local HOA management company, Boschken Properties, owned and operated by Kit & Steve Boschken.</p>
       <p><a target="_blank" href="https://youtu.be/gK5s_l-HNPg">View a brief history of Stonegate</a></p>
     </section>
-    <section class="map"></section>
-    <section class="news_feed"></section>
-    <section class="information"></section>
-    <section class="contact"></section>
-    <section class="classes"></section>
+    <section id="map">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12480.793993561007!2d-121.7866775811675!3d38.55224020958201!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085284026268b67%3A0x37cb8608d5bf90f9!2sStonegate%20Country%20Club!5e0!3m2!1sen!2sus!4v1680043217987!5m2!1sen!2sus" width="500" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </section>
+    <section id="news_feed">
+      <h2>News Feed</h2>
+      <div class="feed">
+        <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FStonegateCountryClub%2Fposts%2Fpfbid0UUicBopxcY74tKPsqE3pvfa1LvMEtM5QxxisS5YQfTzqd8n8fK2rZBxvVtMeXcHzl&show_text=true" height="646" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+      </div>
+    </section>
+    <section id="information"></section>
+    <section id="contact"></section>
+    <section id="classes"></section>
   </main>
-  <footer>Copyright © 2019 Vinteum Software. All rights reserved.</footer>
+  <footer>
+    <hr>
+    <p>Proudly created by Pablo Frias</p>
+    <p>Copyright © 2023. All rights reserved.</p>
+  </footer>
 </body>
+<script>
+  let H = document.getElementById('transition_header');
+
+  function loadAnimation() {
+    H.style.transition = "color 1.5s ease-in-out 1s, padding 1.5s ease-in-out 1s";
+    H.style.paddingTop = "65vh";
+    H.style.color = "var(--header-color-main)";
+  }
+  
+</script>
+<script>
+  let percentParallax = 10; // bg images 20% too large
+  //center is 50%
+  //"bottom" @ scroll = position + nodeHeight = 60%
+  function setYOffset(element) {
+    let scroll = window.scrollY;
+    let position = element.offsetTop;
+    let offset = scroll - position;
+
+    let nodeHeight = element.clientHeight;
+
+    let percent = nodeHeight / offset;
+    percent = Math.max(-10, percent);
+    percent = Math.min(10, percent);
+    
+    element.style.backgroundPositionY = `${50 - percent*2}%`
+
+  }
+
+
+  let parallax = document.getElementsByClassName('parallax-bg');
+
+  document.addEventListener("scroll", (e) => {
+    for (let element of parallax) {
+      setYOffset(element);
+    }
+  });
+
+
+
+</script>
 </html>
