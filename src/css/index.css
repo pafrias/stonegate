@@ -60,7 +60,7 @@ p {
 }
 section#map iframe {
   max-width: 95%;
-  margin: auto;
+  margin: 2.5%;
 }
 
 section#news_feed {
